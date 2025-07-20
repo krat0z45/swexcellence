@@ -1,0 +1,52 @@
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Eye, Gem, Target } from 'lucide-react';
+
+const aboutData = [
+  {
+    icon: <Target className="h-10 w-10 text-primary" />,
+    title: 'Misión',
+    description: 'Proporcionar soluciones integrales en seguridad y salud ocupacional, superando las expectativas de nuestros clientes a través de la excelencia, la innovación y el compromiso.',
+  },
+  {
+    icon: <Eye className="h-10 w-10 text-primary" />,
+    title: 'Visión',
+    description: 'Ser la empresa líder y de referencia en consultoría de seguridad y salud en el trabajo, reconocida por nuestra calidad, profesionalismo y la generación de valor sostenible para nuestros clientes y la sociedad.',
+  },
+  {
+    icon: <Gem className="h-10 w-10 text-primary" />,
+    title: 'Valores',
+    description: 'Integridad, Responsabilidad, Excelencia, Innovación, Compromiso con el cliente y Trabajo en equipo. Estos pilares guían cada una de nuestras acciones y decisiones.',
+  },
+];
+
+const AboutSection = () => {
+  return (
+    <section id="about" className="py-20 lg:py-32 bg-secondary/30">
+      <div className="container mx-auto px-6">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold font-headline text-primary sm:text-4xl">
+            Nuestra Filosofía
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            En SW Safety Excellence, nos regimos por una filosofía clara que impulsa cada proyecto y colaboración.
+          </p>
+        </div>
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
+          {aboutData.map((item, index) => (
+            <Card key={index} className="transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:-translate-y-2 bg-card">
+              <CardHeader className="items-center text-center">
+                {item.icon}
+                <CardTitle className="mt-4 font-headline text-2xl">{item.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground">{item.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
