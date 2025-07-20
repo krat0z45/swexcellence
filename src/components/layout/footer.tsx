@@ -13,8 +13,8 @@ const Footer = () => {
             <Image
               src="/img/logo.png" // Coloca tu logo en la carpeta public/
               alt="SW Safety Excellence Logo"
-              width={500}
-              height={500}
+              width={350}
+              height={350}
             />
             <span className="text-sm text-primary-foreground/70">
               &copy; {new Date().getFullYear()} SW Safety Excellence. Todos los derechos reservados.
