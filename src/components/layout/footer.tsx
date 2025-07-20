@@ -11,10 +11,10 @@ const Footer = () => {
           {/* Logo + Copyright */}
           <div className="flex items-center gap-4">
             <Image
-              src="img/logo.svg" // Coloca tu logo en la carpeta public/
+              src="/img/logo.png" // Coloca tu logo en la carpeta public/
               alt="SW Safety Excellence Logo"
-              width={40}
-              height={40}
+              width={500}
+              height={500}
             />
             <span className="text-sm text-primary-foreground/70">
               &copy; {new Date().getFullYear()} SW Safety Excellence. Todos los derechos reservados.

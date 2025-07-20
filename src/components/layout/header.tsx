@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // Importamos Image
 
 const navLinks = [
     { href: '#services', label: 'Servicios' },
@@ -48,16 +49,24 @@ const Header = () => {
             id="mainNav"
         >
             <div className="container mx-auto flex h-24 items-center justify-between px-6">
-                <a
+                {/* Logo */}
+                <Link
                     href="#home"
-                    className="text-2xl font-bold text-primary-foreground font-headline"
                     onClick={(e) => {
                         e.preventDefault();
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
+                    className="block"
+                    aria-label="Inicio - SW Safety Excellence"
                 >
-                    SW Safety Excellence
-                </a>
+                    <Image
+                        src="/img/logo.png" // Asegúrate de tener tu logo en public/img/logo.png
+                        alt="SW Safety Excellence Logo"
+                        width={230}
+                        height={300}
+                        quality={100}
+                    />
+                </Link>
 
                 {/* Desktop Menu */}
                 <nav className="hidden lg:flex">
