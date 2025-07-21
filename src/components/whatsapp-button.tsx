@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/5215512345678" // Replace with your WhatsApp number
+      href="https://wa.me/5218123548968?text=Hola,%20quiero%20más%20información%20por%20favor"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"

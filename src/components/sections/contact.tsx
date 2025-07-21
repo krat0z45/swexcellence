@@ -17,8 +17,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, MapPin, Phone, Linkedin, Facebook, Instagram } from "lucide-react";
-import { submitAction } from "@/actions/contact";
+import emailjs from "emailjs-com";
 
+// Esquema de validación
 const formSchema = z.object({
   name: z.string().min(2, "El nombre debe tener al menos 2 caracteres."),
   email: z.string().email("Por favor, introduce un correo electrónico válido."),
@@ -26,7 +27,6 @@ const formSchema = z.object({
 });
 
 type FormData = z.infer<typeof formSchema>;
-
 
 const ContactSection = () => {
   const form = useForm<FormData>({
@@ -38,22 +38,39 @@ const ContactSection = () => {
     },
   });
 
-  async function onSubmit(data: FormData) {
-    const result = await submitAction(data);
-    if (result.success) {
+  // Cargar variables de entorno
+  const YOUR_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const YOUR_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const YOUR_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      await emailjs.send(
+        YOUR_SERVICE_ID!,
+        YOUR_TEMPLATE_ID!,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+          to_email: "tu-correo@ejemplo.com", // Reemplaza con tu correo
+        },
+        YOUR_PUBLIC_KEY!
+      );
+
       toast({
         title: "Éxito",
-        description: result.message,
+        description: "¡Tu mensaje ha sido enviado con éxito!",
       });
       form.reset();
-    } else {
+    } catch (error) {
+      console.error("Error al enviar el mensaje:", error);
       toast({
         variant: "destructive",
         title: "Error",
         description: "Hubo un problema al enviar el mensaje.",
       });
     }
-  }
+  };
 
   return (
     <section id="contact" className="py-20 lg:py-32 bg-background">
