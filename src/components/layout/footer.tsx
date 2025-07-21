@@ -4,8 +4,8 @@ import Image from 'next/image'; // Asegúrate de importar Image de next/image
 
 const Footer = () => {
   return (
-    <footer className="bg-[var(--footer-bg)] text-primary-foreground">
-      <div className="container mx-auto px-6 py-6">
+    <footer className="w-full bg-[var(--footer-bg)] text-white py-8 px-4">
+      <div className="container mx-auto flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           
           {/* Logo + Copyright */}
@@ -13,8 +13,8 @@ const Footer = () => {
             <Image
               src="/img/logo.png" // Coloca tu logo en la carpeta public/
               alt="SW Safety Excellence Logo"
-              width={350}
-              height={350}
+              width={200}
+              height={200}
             />
             <span className="text-sm text-primary-foreground/70">
               &copy; {new Date().getFullYear()} SW Safety Excellence. Todos los derechos reservados.
