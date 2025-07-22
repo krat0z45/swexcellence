@@ -339,7 +339,7 @@ const HeroSection = ()=>{
         className: "relative h-screen min-h-[700px] w-full flex items-center justify-center",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                src: "/img/herosw.jpg",
+                src: "/img/header.jpeg",
                 alt: "Equipo de trabajo con equipo de seguridad",
                 fill: true,
                 style: {
@@ -362,23 +362,23 @@ const HeroSection = ()=>{
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "font-serif text-3xl italic sm:text-4xl lg:text-5xl mb-4",
+                            className: "font-serif text-3xl italic sm:text-4xl lg:text-5xl mb-4 translate-y-[-1.5em]",
                             children: "Tu Aliado Estratégico"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/hero.tsx",
                             lineNumber: 18,
-                            columnNumber: 11
+                            columnNumber: 5
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-4xl font-extrabold font-headline uppercase leading-tight sm:text-5xl lg:text-7xl",
+                            className: "text-4xl font-extrabold font-headline uppercase leading-tight sm:text-5xl lg:text-7xl translate-y-[-1.2em]",
                             children: "SW Safety Excellence"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/hero.tsx",
-                            lineNumber: 19,
-                            columnNumber: 11
+                            lineNumber: 21,
+                            columnNumber: 5
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mt-8",
+                            className: "mt-8 translate-y-[-4.2em]",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
                                 size: "lg",
                                 className: "h-16 px-10 text-lg font-bold uppercase",
@@ -388,24 +388,24 @@ const HeroSection = ()=>{
                                     children: "Conoce Más"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/hero.tsx",
-                                    lineNumber: 24,
+                                    lineNumber: 27,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/hero.tsx",
-                                lineNumber: 23,
+                                lineNumber: 26,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/hero.tsx",
-                            lineNumber: 22,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/sections/hero.tsx",
                     lineNumber: 17,
-                    columnNumber: 9
+                    columnNumber: 3
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/hero.tsx",
@@ -528,7 +528,7 @@ const aboutData = [
             columnNumber: 11
         }, this),
         title: 'Misión',
-        description: 'Emprender acciones que permitan la formación integral de personas comprometidas con la prevención de acontecimientos no deseados.'
+        description: 'Proporcionar al mercado un nuevo concepto de Seguridad Industrial, Protección, Salud Ocupacional y Control Ambiental a través del manejo integral de los sistemas, con la firme convicción de la mejora continua y el bienestar de su empresa. Emprender acciones que permitan la formación integral de personas comprometidas con la prevención de acontecimientos no deseados. Fomentar la cultura, conciencia y respeto del medio ambiente que nos rodea.'
     },
     {
         icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
@@ -539,7 +539,7 @@ const aboutData = [
             columnNumber: 11
         }, this),
         title: 'Visión',
-        description: 'Formar personal con un alto desempeño integral, alcanzando productividades óptimas de acuerdo a sus necesidades y recursos.'
+        description: 'Formar personal con un alto desempeño    integral, alcanzando productividades óptimas de acuerdo a sus necesidades y recursos. Mantener la conciencia y cultura del personal a través del sistema integral implementado en las distintas áreas de trabajo. Prevalecer en el mercado a través de nuevos productos y servicios creados en base a las necesidades de nuestros clientes.'
     },
     {
         icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$gem$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Gem$3e$__["Gem"], {
@@ -550,7 +550,7 @@ const aboutData = [
             columnNumber: 11
         }, this),
         title: 'Valores',
-        description: 'Integridad, Responsabilidad, Excelencia, Innovación, Compromiso con el cliente y Trabajo en equipo. Estos pilares guían cada una de nuestras acciones y decisiones.'
+        description: 'Liderazgo, Servicio, Trabajo en equipo, Desarrollo, Lealtad, Responsabilidad. Estos pilares guían cada una de nuestras acciones y decisiones.'
     }
 ];
 const AboutSection = ()=>{
@@ -659,10 +659,6 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/card.tsx [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/linkedin.js [app-rsc] (ecmascript) <export default as Linkedin>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/button.tsx [app-rsc] (ecmascript)");
-;
-;
 ;
 ;
 ;
@@ -670,13 +666,13 @@ const teamMembers = [
     {
         name: 'Carlos Alberto Sáenz',
         role: 'Director General y Consultor Principal',
-        imageUrl: '/img/team/carlos.avif',
+        imageUrl: '/img/team/carlos.jpeg',
         hint: 'professional headshot'
     },
     {
         name: 'Nidia Woo González',
         role: 'Directora de Operaciones y Capacitación',
-        imageUrl: '/img/team/nidia.jpg',
+        imageUrl: '/img/team/nidia.jpeg',
         hint: 'professional woman'
     }
 ];
@@ -695,7 +691,7 @@ const TeamSection = ()=>{
                             children: "Conoce a Nuestro Equipo"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/team.tsx",
-                            lineNumber: 26,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -703,13 +699,13 @@ const TeamSection = ()=>{
                             children: "Profesionales experimentados y apasionados por la seguridad, listos para guiarte hacia la excelencia."
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/team.tsx",
-                            lineNumber: 29,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/sections/team.tsx",
-                    lineNumber: 25,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -718,30 +714,34 @@ const TeamSection = ()=>{
                             className: "overflow-hidden text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-card",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardHeader"], {
-                                    className: "p-0",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "relative h-80 w-full",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                            src: member.imageUrl,
-                                            alt: `Foto de ${member.name}`,
-                                            fill: true,
-                                            style: {
-                                                objectFit: 'cover'
-                                            },
-                                            "data-ai-hint": member.hint
+                                    className: "p-0 aspect-square md:h-85",
+                                    children: [
+                                        " ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "relative w-full h-full",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                                src: member.imageUrl,
+                                                alt: `Foto de ${member.name}`,
+                                                fill: true,
+                                                style: {
+                                                    objectFit: 'cover',
+                                                    objectPosition: 'top 20%'
+                                                },
+                                                sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/sections/team.tsx",
+                                                lineNumber: 40,
+                                                columnNumber: 19
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/team.tsx",
-                                            lineNumber: 38,
-                                            columnNumber: 19
+                                            lineNumber: 39,
+                                            columnNumber: 17
                                         }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/sections/team.tsx",
-                                        lineNumber: 37,
-                                        columnNumber: 17
-                                    }, this)
-                                }, void 0, false, {
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/src/components/sections/team.tsx",
-                                    lineNumber: 36,
+                                    lineNumber: 38,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -752,7 +752,7 @@ const TeamSection = ()=>{
                                             children: member.name
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/team.tsx",
-                                            lineNumber: 48,
+                                            lineNumber: 54,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -760,44 +760,13 @@ const TeamSection = ()=>{
                                             children: member.role
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/team.tsx",
-                                            lineNumber: 49,
+                                            lineNumber: 55,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/sections/team.tsx",
-                                    lineNumber: 47,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardFooter"], {
-                                    className: "justify-center pb-6",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
-                                        variant: "outline",
-                                        size: "icon",
-                                        asChild: true,
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "#",
-                                            "aria-label": `LinkedIn de ${member.name}`,
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"], {
-                                                className: "h-5 w-5"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/sections/team.tsx",
-                                                lineNumber: 54,
-                                                columnNumber: 25
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/sections/team.tsx",
-                                            lineNumber: 53,
-                                            columnNumber: 21
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/sections/team.tsx",
-                                        lineNumber: 52,
-                                        columnNumber: 18
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/sections/team.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 53,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -814,12 +783,12 @@ const TeamSection = ()=>{
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/sections/team.tsx",
-            lineNumber: 24,
+            lineNumber: 23,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/sections/team.tsx",
-        lineNumber: 23,
+        lineNumber: 22,
         columnNumber: 5
     }, this);
 };
@@ -1077,32 +1046,32 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$c
 ;
 const galleryImages = [
     {
-        src: 'https://images.pexels.com/photos/18471457/pexels-photo-18471457.jpeg',
+        src: '/img/proyectos/1.jpeg',
         alt: 'Proyecto 1',
         hint: 'construction safety'
     },
     {
-        src: 'https://images.pexels.com/photos/18471441/pexels-photo-18471441.jpeg',
+        src: '/img/proyectos/2.jpeg',
         alt: 'Proyecto 2',
         hint: 'industrial work'
     },
     {
-        src: 'https://images.pexels.com/photos/18471568/pexels-photo-18471568.jpeg',
+        src: '/img/proyectos/3.jpeg',
         alt: 'Proyecto 3',
         hint: 'safety meeting'
     },
     {
-        src: 'https://images.pexels.com/photos/1267329/pexels-photo-1267329.jpeg',
+        src: '/img/proyectos/4.jpeg',
         alt: 'Proyecto 4',
         hint: 'worker equipment'
     },
     {
-        src: 'https://images.pexels.com/photos/8159/pexels-photo.jpg',
+        src: '/img/proyectos/5.jpeg',
         alt: 'Proyecto 5',
         hint: 'factory inspection'
     },
     {
-        src: 'https://images.pexels.com/photos/162529/grinder-hitachi-power-tool-flexible-162529.jpeg',
+        src: '/img/proyectos/6.jpeg',
         alt: 'Proyecto 6',
         hint: 'team collaboration'
     }

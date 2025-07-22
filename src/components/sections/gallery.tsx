@@ -2,12 +2,12 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 
 const galleryImages = [
-  { src: 'https://images.pexels.com/photos/18471457/pexels-photo-18471457.jpeg', alt: 'Proyecto 1', hint: 'construction safety' },
-  { src: 'https://images.pexels.com/photos/18471441/pexels-photo-18471441.jpeg', alt: 'Proyecto 2', hint: 'industrial work' },
-  { src: 'https://images.pexels.com/photos/18471568/pexels-photo-18471568.jpeg', alt: 'Proyecto 3', hint: 'safety meeting' },
-  { src: 'https://images.pexels.com/photos/1267329/pexels-photo-1267329.jpeg', alt: 'Proyecto 4', hint: 'worker equipment' },
-  { src: 'https://images.pexels.com/photos/8159/pexels-photo.jpg', alt: 'Proyecto 5', hint: 'factory inspection' },
-  { src: 'https://images.pexels.com/photos/162529/grinder-hitachi-power-tool-flexible-162529.jpeg', alt: 'Proyecto 6', hint: 'team collaboration' },
+  { src: '/img/proyectos/1.jpeg', alt: 'Proyecto 1', hint: 'construction safety' },
+  { src: '/img/proyectos/2.jpeg', alt: 'Proyecto 2', hint: 'industrial work' },
+  { src: '/img/proyectos/3.jpeg', alt: 'Proyecto 3', hint: 'safety meeting' },
+  { src: '/img/proyectos/4.jpeg', alt: 'Proyecto 4', hint: 'worker equipment' },
+  { src: '/img/proyectos/5.jpeg', alt: 'Proyecto 5', hint: 'factory inspection' },
+  { src: '/img/proyectos/6.jpeg', alt: 'Proyecto 6', hint: 'team collaboration' },
 ];
 
 const GallerySection = () => {

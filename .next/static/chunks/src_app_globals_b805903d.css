@@ -577,10 +577,6 @@ html {
   margin-right: .5rem;
 }
 
-.mt-1 {
-  margin-top: .25rem;
-}
-
 .mt-16 {
   margin-top: 4rem;
 }
@@ -599,6 +595,10 @@ html {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-1 {
+  margin-top: .25rem;
 }
 
 .block {
@@ -688,10 +688,6 @@ html {
 
 .h-8 {
   height: 2rem;
-}
-
-.h-80 {
-  height: 20rem;
 }
 
 .h-9 {
@@ -854,6 +850,10 @@ html {
   max-width: 42rem;
 }
 
+.max-w-3xl {
+  max-width: 48rem;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -920,6 +920,21 @@ html {
 
 .translate-x-px {
   --tw-translate-x: 1px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[-1\.2em\] {
+  --tw-translate-y: -1.2em;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[-1\.5em\] {
+  --tw-translate-y: -1.5em;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[-4\.2em\] {
+  --tw-translate-y: -4.2em;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1039,12 +1054,12 @@ html {
   gap: .375rem;
 }
 
-.gap-12 {
-  gap: 3rem;
-}
-
 .gap-2 {
   gap: .5rem;
+}
+
+.gap-3 {
+  gap: .75rem;
 }
 
 .gap-4 {
@@ -1057,6 +1072,10 @@ html {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1350,12 +1369,12 @@ html {
   padding: 1.5rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .p-\[1px\] {
   padding: 1px;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-1 {
@@ -2849,12 +2868,12 @@ html {
     flex-basis: 16.6667%;
   }
 
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:py-24 {

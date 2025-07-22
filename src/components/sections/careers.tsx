@@ -1,4 +1,6 @@
 "use client";
+import { toast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
 
 import { useState } from 'react';
 import {
@@ -88,32 +90,56 @@ const CareersSection = () => {
     setSelectedJob(null);
   };
 
-  const onSubmit = (data: ApplicationForm, method: 'email' | 'whatsapp') => {
-    if (!selectedJob) return;
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CAREERS;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-    const subject = `Aplicación para: ${selectedJob.title}`;
-    const body = `Hola,
+  const onSubmit = async (data: ApplicationForm) => {
+  if (!serviceId || !templateId || !publicKey) {
+    toast({
+      variant: "destructive",
+      title: "Error",
+      description: "Configuración incompleta. Contacta al administrador.",
+    });
+    return;
+  }
 
-Mi nombre es ${data.name}. Estoy interesado en la vacante de ${selectedJob.title}.
+  if (!selectedJob) return;
 
-Correo de contacto: ${data.email}
-Teléfono: ${data.phone || 'No proporcionado'}
+  try {
+    await emailjs.send(
+      serviceId,
+      templateId,
+      {
+        name: data.name,
+        email: data.email,
+        phone: data.phone || 'No proporcionado',
+        cover_letter: data.coverLetter,
+        job_title: selectedJob.title,
+        job_location: selectedJob.location,
+        reply_to: data.email,
+        to_email: "reclutamiento@swexcellence.com",
+      },
+      publicKey
+    );
 
-Carta de presentación:
-${data.coverLetter}
+    toast({
+      title: "¡Postulación enviada!",
+      description: "Gracias por tu interés. Revisaremos tu perfil pronto.",
+    });
 
-Saludos,
-${data.name}`;
-
-    if (method === 'email') {
-      const mailtoLink = `mailto:reclutamiento@swsafety.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoLink;
-    } else {
-      const whatsappNumber = "5215512345678"; // Replace with your number
-      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(body)}`;
-      window.open(whatsappLink, '_blank');
-    }
-  };
+    // Resetear formulario y cerrar panel
+    form.reset();
+    handleSheetClose();
+  } catch (error) {
+    console.error("Error al enviar la postulación:", error);
+    toast({
+      variant: "destructive",
+      title: "Error",
+      description: "No se pudo enviar tu postulación. Intenta más tarde.",
+    });
+  }
+};
 
   return (
     <>
@@ -220,9 +246,22 @@ ${data.name}`;
                     )}
                   />
                   <div className="flex flex-col sm:flex-row gap-2 pt-4">
-                    <Button type="button" onClick={form.handleSubmit((data) => onSubmit(data, 'email'))} className="w-full">
-                       <Mail className="mr-2 h-4 w-4" /> Enviar por Correo
-                    </Button>
+                    <Button
+  type="button"
+  onClick={form.handleSubmit(onSubmit)}
+  className="w-full"
+  disabled={form.formState.isSubmitting}
+>
+  {form.formState.isSubmitting ? (
+    <>
+      Enviando...
+    </>
+  ) : (
+    <>
+      <Mail className="mr-2 h-4 w-4" /> Enviar Postulación
+    </>
+  )}
+</Button>
                     <Button type="button" onClick={form.handleSubmit((data) => onSubmit(data, 'whatsapp'))} variant="secondary" className="w-full">
                         <MessageCircle className="mr-2 h-4 w-4" /> Enviar por WhatsApp
                     </Button>

@@ -5,17 +5,17 @@ const aboutData = [
   {
     icon: <Target className="h-10 w-10 text-primary" />,
     title: 'Misión',
-    description: 'Emprender acciones que permitan la formación integral de personas comprometidas con la prevención de acontecimientos no deseados.',
+    description: 'Proporcionar al mercado un nuevo concepto de Seguridad Industrial, Protección, Salud Ocupacional y Control Ambiental a través del manejo integral de los sistemas, con la firme convicción de la mejora continua y el bienestar de su empresa. Emprender acciones que permitan la formación integral de personas comprometidas con la prevención de acontecimientos no deseados. Fomentar la cultura, conciencia y respeto del medio ambiente que nos rodea.',
   },
   {
     icon: <Eye className="h-10 w-10 text-primary" />,
     title: 'Visión',
-    description: 'Formar personal con un alto desempeño integral, alcanzando productividades óptimas de acuerdo a sus necesidades y recursos.',
+    description: 'Formar personal con un alto desempeño    integral, alcanzando productividades óptimas de acuerdo a sus necesidades y recursos. Mantener la conciencia y cultura del personal a través del sistema integral implementado en las distintas áreas de trabajo. Prevalecer en el mercado a través de nuevos productos y servicios creados en base a las necesidades de nuestros clientes.',
   },
   {
     icon: <Gem className="h-10 w-10 text-primary" />,
     title: 'Valores',
-    description: 'Integridad, Responsabilidad, Excelencia, Innovación, Compromiso con el cliente y Trabajo en equipo. Estos pilares guían cada una de nuestras acciones y decisiones.',
+    description: 'Liderazgo, Servicio, Trabajo en equipo, Desarrollo, Lealtad, Responsabilidad. Estos pilares guían cada una de nuestras acciones y decisiones.',
   },
 ];
 

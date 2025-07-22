@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center">
       <Image
-        src="/img/herosw.jpg"
+        src="/img/header.jpeg"
         alt="Equipo de trabajo con equipo de seguridad"
         fill
         style={{ objectFit: 'cover' }}
@@ -14,12 +14,15 @@ const HeroSection = () => {
         priority
       />
       <div className="relative z-10 text-center">
-        <div className="container mx-auto px-6 text-white animate-fade-in" style={{animationDuration: '1s'}}>
-          <div className="font-serif text-3xl italic sm:text-4xl lg:text-5xl mb-4">Tu Aliado Estratégico</div>
-          <h1 className="text-4xl font-extrabold font-headline uppercase leading-tight sm:text-5xl lg:text-7xl">
-            SW Safety Excellence
-          </h1>
-          <div className="mt-8">
+  <div className="container mx-auto px-6 text-white animate-fade-in" style={{ animationDuration: '1s' }}>
+    <div className="font-serif text-3xl italic sm:text-4xl lg:text-5xl mb-4 translate-y-[-1.5em]">
+      Tu Aliado Estratégico
+    </div>
+    <h1 className="text-4xl font-extrabold font-headline uppercase leading-tight sm:text-5xl lg:text-7xl translate-y-[-1.2em]">
+      SW Safety Excellence
+    </h1>
+  
+          <div className="mt-8 translate-y-[-4.2em]">
             <Button size="lg" className="h-16 px-10 text-lg font-bold uppercase" asChild>
               <a href="#services">Conoce Más</a>
             </Button>

@@ -1,19 +1,18 @@
 import Image from 'next/image';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Linkedin } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '../ui/button';
 
 const teamMembers = [
   {
     name: 'Carlos Alberto Sáenz',
     role: 'Director General y Consultor Principal',
-    imageUrl: '/img/team/carlos.avif',
+    imageUrl: '/img/team/carlos.jpeg',
     hint: 'professional headshot',
   },
   {
     name: 'Nidia Woo González',
     role: 'Directora de Operaciones y Capacitación',
-    imageUrl: '/img/team/nidia.jpg',
+    imageUrl: '/img/team/nidia.jpeg',
     hint: 'professional woman',
   },
 ];
@@ -30,31 +29,32 @@ const TeamSection = () => {
             Profesionales experimentados y apasionados por la seguridad, listos para guiarte hacia la excelencia.
           </p>
         </div>
+
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 justify-center max-w-4xl mx-auto">
           {teamMembers.map((member) => (
             <Card key={member.name} className="overflow-hidden text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-card">
-              <CardHeader className="p-0">
-                <div className="relative h-80 w-full">
+              
+              {/* Imagen con altura adaptable */}
+              <CardHeader className="p-0 aspect-square md:h-85"> {/* Altura responsive */}
+                <div className="relative w-full h-full">
                   <Image
                     src={member.imageUrl}
                     alt={`Foto de ${member.name}`}
                     fill
-                    style={{ objectFit: 'cover' }}
-                    data-ai-hint={member.hint}
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'top 20%', // Ajuste fino: muestra más cara y cabeza
+                    }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
               </CardHeader>
+
               <CardContent className="p-6">
                 <CardTitle className="font-headline text-2xl text-primary">{member.name}</CardTitle>
                 <p className="mt-2 text-primary/80 font-semibold">{member.role}</p>
               </CardContent>
-              <CardFooter className="justify-center pb-6">
-                 <Button variant="outline" size="icon" asChild>
-                    <a href="#" aria-label={`LinkedIn de ${member.name}`}>
-                        <Linkedin className="h-5 w-5" />
-                    </a>
-                 </Button>
-              </CardFooter>
+              
             </Card>
           ))}
         </div>

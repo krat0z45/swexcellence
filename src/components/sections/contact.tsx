@@ -38,28 +38,39 @@ const ContactSection = () => {
     },
   });
 
-  // Cargar variables de entorno
-  const YOUR_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-  const YOUR_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-  const YOUR_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+  // Cargar variables de entorno (asegúrate de que estén en .env.local)
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
   const onSubmit = async (data: FormData) => {
+    if (!serviceId || !templateId || !publicKey) {
+      toast({
+        variant: "destructive",
+        title: "Configuración incompleta",
+        description: "Faltan variables de entorno para EmailJS.",
+      });
+      console.error("Faltan variables de entorno de EmailJS");
+      return;
+    }
+
     try {
       await emailjs.send(
-        YOUR_SERVICE_ID!,
-        YOUR_TEMPLATE_ID!,
+        serviceId,
+        templateId,
         {
-          from_name: data.name,
-          from_email: data.email,
+          name: data.name,           // ← Asegúrate de que coincida con tu plantilla
+          email: data.email,         // ← clave para mostrar en el correo
           message: data.message,
-          to_email: "tu-correo@ejemplo.com", // Reemplaza con tu correo
+          reply_to: data.email,      // Para que "Responder" vaya al cliente
+          to_email: "nidia.woo@swexcellence.com",
         },
-        YOUR_PUBLIC_KEY!
+        publicKey
       );
 
       toast({
-        title: "Éxito",
-        description: "¡Tu mensaje ha sido enviado con éxito!",
+        title: "¡Éxito!",
+        description: "Tu mensaje ha sido enviado. Nos pondremos en contacto pronto.",
       });
       form.reset();
     } catch (error) {
@@ -67,7 +78,7 @@ const ContactSection = () => {
       toast({
         variant: "destructive",
         title: "Error",
-        description: "Hubo un problema al enviar el mensaje.",
+        description: "No se pudo enviar el mensaje. Intenta más tarde.",
       });
     }
   };
@@ -75,15 +86,17 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center">
+        <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold font-headline text-primary sm:text-4xl">
             Ponte en Contacto
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-muted-foreground">
             ¿Tienes alguna pregunta o quieres iniciar un proyecto? Estamos aquí para ayudarte.
           </p>
         </div>
+
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
+          {/* Formulario */}
           <Card className="shadow-lg">
             <CardContent className="p-8">
               <Form {...form}>
@@ -95,12 +108,13 @@ const ContactSection = () => {
                       <FormItem>
                         <FormLabel>Nombre Completo</FormLabel>
                         <FormControl>
-                          <Input placeholder="Tu nombre" {...field} />
+                          <Input placeholder="Ej. Juan Pérez" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
+
                   <FormField
                     control={form.control}
                     name="email"
@@ -108,12 +122,13 @@ const ContactSection = () => {
                       <FormItem>
                         <FormLabel>Correo Electrónico</FormLabel>
                         <FormControl>
-                          <Input placeholder="tu@correo.com" {...field} />
+                          <Input type="email" placeholder="tu@correo.com" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
+
                   <FormField
                     control={form.control}
                     name="message"
@@ -121,19 +136,30 @@ const ContactSection = () => {
                       <FormItem>
                         <FormLabel>Mensaje</FormLabel>
                         <FormControl>
-                          <Textarea placeholder="¿Cómo podemos ayudarte?" rows={5} {...field} />
+                          <Textarea
+                            placeholder="¿En qué podemos ayudarte?"
+                            rows={5}
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
+
+                  <Button
+                    type="submit"
+                    className="w-full font-semibold"
+                    disabled={form.formState.isSubmitting}
+                  >
                     {form.formState.isSubmitting ? "Enviando..." : "Enviar Mensaje"}
                   </Button>
                 </form>
               </Form>
             </CardContent>
           </Card>
+
+          {/* Información de contacto */}
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold font-headline text-primary">Nuestra Información</h3>
             <div className="space-y-6">
@@ -141,33 +167,45 @@ const ContactSection = () => {
                 <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold">Dirección</h4>
-                  <p className="text-muted-foreground">Av. Principal 123, Piso 4, Oficina 401, Ciudad de México, CP 01010</p>
+                  <p className="text-muted-foreground">
+                    Monterrey, Nuevo León, México
+                  </p>
                 </div>
               </div>
+
               <div className="flex items-start gap-4">
                 <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold">Teléfono</h4>
-                  <p className="text-muted-foreground">+52 55 1234 5678</p>
+                  <p className="text-muted-foreground">+52 81 8660 9599</p>
                 </div>
               </div>
+
               <div className="flex items-start gap-4">
                 <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold">Correo Electrónico</h4>
-                  <p className="text-muted-foreground">contacto@swsafety.com</p>
+                  <p className="text-muted-foreground">nidia.woo@swexcellence.com</p>
                 </div>
               </div>
             </div>
+
+            {/* Redes sociales */}
             <div className="flex space-x-4">
               <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label="LinkedIn"><Linkedin /></a>
+                <a href="#" aria-label="LinkedIn">
+                  <Linkedin className="h-5 w-5" />
+                </a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label="Facebook"><Facebook /></a>
+                <a href="#" aria-label="Facebook">
+                  <Facebook className="h-5 w-5" />
+                </a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label="Instagram"><Instagram /></a>
+                <a href="#" aria-label="Instagram">
+                  <Instagram className="h-5 w-5" />
+                </a>
               </Button>
             </div>
           </div>
