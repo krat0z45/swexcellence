@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Logo + Copyright */}
           <div className="flex items-center gap-4">
             <Image
-              src="/img/logo.png" // Coloca tu logo en la carpeta public/
+              src="/img/logo.png"
               alt="SW Safety Excellence Logo"
               width={200}
               height={200}
@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Redes sociales */}
           <div className="flex space-x-2">
             <Button variant="ghost" size="icon" asChild className="text-primary-foreground/70 hover:text-primary-foreground">
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/sw-safety-46b522377/" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
